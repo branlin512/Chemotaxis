@@ -1,17 +1,21 @@
  //declare bacteria variables here
-Bacteria chaser;
+Bacteria[] chaser=new Bacteria[3];
  //visit APCS Lowell to find how to place Ryan's face as chaser and starbucks logo as mouse
  void setup()   
  {
    size(600,600);
-   chaser=new Bacteria();
+   for(int i=0;i<=2;i++) {
+     chaser[i]=new Bacteria();
+   }
  }   
  void draw()   
  { 
    background(0,0,0);
-   chaser.move();
-   chaser.show();
-   chaser.textFlash();
+   for (int i=0;i<=2;i++) {
+     chaser[i].move();
+     chaser[i].show();
+     chaser[i].textFlash();
+   }
  	//move and show the bacteria   
  }  
  class Bacteria    
